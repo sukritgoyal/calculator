@@ -1,0 +1,5 @@
+.aabb{background-color: #deeafa;padding-right: 2px;margin-left: 25%; padding:5px;position: absolute;padding-top: 3px;}
+#xxyy:disabled{text-align: right;border: 5px solid black;width:90%;height:1cm;font-size: 20px;background-color: #cbd3d6; text-decoration-color: green;}
+body{font-family: 'Yanone Kaffeesatz', sans-serif;}
+button{background-color: #c5dde0;border-radius: 25%;width:1.5cm;height:1cm;border:0px;}
+[contenteditable]{outline: 0px}

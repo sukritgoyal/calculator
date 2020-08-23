@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body style="text-align: center">
+      <h1 id="h">Graphical Calculator</h1>
+      <div class="aabb">
+        <br>
+      <div>
+        <input id="xxyy" type="text" name="expression" placeholder=0 disabled>
+        <script type="text/javascript">
+          var inp = document.getElementById('xxyy');
+          function clearScreen(){inp.value='';}
+          function equal(){inp.value = eval(inp.value)}
+
+        </script>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td><button type="button" contenteditable="true" onmousedown="display(7)">7</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(8)">8</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(9)">9</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display('+')">+</button></td>
+          </tr>
+          <tr>
+            <td><button type="button" contenteditable="true" onmousedown="display(4)">4</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(5)">5</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(6)">6</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display('-')">-</button></td>
+          </tr>
+          <tr>
+            <td><button type="button" contenteditable="true" onmousedown="display(1)">1</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(2)">2</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(3)">3</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display('*')">*</button></td>
+          </tr>
+          <tr>
+            <td><button type="button" contenteditable="true" onmousedown="clearScreen()">AC</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display(0)">0</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="equal()">=</button></td>
+            <td><button type="button" contenteditable="true" onmousedown="display('/')">/</button></td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <script type="text/javascript">
+      var butt_calc = document.querySelectorAll("button");
+      function display(x){inp.value += x;}
+      butt_calc.forEach(item => {item.addEventListener("mousedown",function(){this.style.backgroundColor='#697a6c';this.style.border='2px solid black'})})
+      butt_calc.forEach(item => {item.addEventListener("touchstart",function(){this.style.backgroundColor='#697a6c';this.style.border='2px solid black'})})
+      butt_calc.forEach(item => {item.addEventListener("mouseup",function(){this.style.background="#96b099";this.style.border="0px"})});
+      butt_calc.forEach(item => {item.addEventListener("touchend",function(){this.style.background="#96b099";this.style.border="0px"})});
+      butt_calc.forEach(item => {item.addEventListener("mouseover",function(){
+          this.style.backgroundColor="#96b099";
+        })});
+      butt_calc.forEach(item => {item.addEventListener("mouseout",function(){
+          this.style.backgroundColor="#c5dde0";
+        })});
+      </script>
+  </body>
+</html>
